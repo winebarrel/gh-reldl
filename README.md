@@ -22,7 +22,10 @@ gh-reldl https://github.com/cli/cli/releases/download/v2.2.0/gh_2.2.0_linux_amd6
 ## Installation
 
 ```sh
-curl -sSfL https://github.com/winebarrel/gh-reldl/releases/download/v0.1.0/gh-reldl_v0.1.0_x86_64-apple-darwin > gh-reldl
+#curl -sSfL https://github.com/winebarrel/gh-reldl/releases/download/v0.1.0/gh-reldl_v0.1.0_aarch64-apple-darwin > gh-reldl
+#curl -sSfL https://github.com/winebarrel/gh-reldl/releases/download/v0.1.0/gh-reldl_v0.1.0_aarch64-unknown-linux-gnu > gh-reldl
+#curl -sSfL https://github.com/winebarrel/gh-reldl/releases/download/v0.1.0/gh-reldl_v0.1.0_x86_64-apple-darwin > gh-reldl
+curl -sSfL https://github.com/winebarrel/gh-reldl/releases/download/v0.1.0/gh-reldl_v0.1.0_x86_64-unknown-linux-gnu > gh-reldl
 chmod +x gh-reldl
 ./gh-reldl --help
 ```
