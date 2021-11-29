@@ -41,7 +41,6 @@ pub async fn download(opts: &cli::Options) -> Result<()> {
     }
 
     let res = req.send().await?;
-
     let status = res.status();
     let content = res.bytes().await?;
 
@@ -54,10 +53,10 @@ pub async fn download(opts: &cli::Options) -> Result<()> {
     }
 
     if opts.file == "-" {
-        io::stdout().write_all(&content)?;
+        io::stdout().write_all(&content).unwrap();
     } else {
         let mut dest = std::fs::File::create(&opts.file).unwrap();
-        dest.write_all(&content)?;
+        dest.write_all(&content).unwrap();
     }
 
     Ok(())
